@@ -1,39 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Accordeon</title>
-</head>
-<body>
-    <header class="header">CSS Bayan</header>
+  </head>
+  <body>
     <div class="wrapper">
+
         <div class="inner">
-            <h2>Where is a task for codejam?</h2>
-            <img src="./img/lebowski.jpg" alt="img: lebowski">
-            <icon></icon>
-        </div>
-        <div class="inner">
-            <h2>Received new task</h2>
-            <img src="./img/zootopia.gif" alt="gif: zootopia">
-            <icon></icon>
-        </div>
-        <div class="inner">
-            <h2>Warning: Coder at work</h2>
-            <img src="./img/coder.gif" alt="gif: coder">
-            <icon></icon>
-        </div>
-        <div class="inner">
-            <h2>DO NOT merge</h2>
-            <img src="./img/terminator.gif" alt="gif: terminator">
-            <icon></icon>
-        </div>
-        <div class="inner">
-            <h2>When submitted your task</h2>
-            <img src="./img/mib.gif" alt="gif: man in black">
-            <icon></icon>
-        </div>
-        </div>
-</body>
+            <input type="radio" name="meme" id="5" />
+            <label for="5">When submitted your task
+                <img class="not-active" src="./img/mib.gif" alt="gif: man in black" />
+                <i class="close-button">&#43;</i>
+            </label>
+            
+                           
+          </div>
+
+
+
+
+      <div class="inner">
+        <label for="1">Where is a task for codejam?
+            <i class="close-button">&#43;</i>
+            
+        </label>
+        <input type="radio" name="meme" checked="checked" id="1" />
+        <img class="active" src="./img/lebowski.jpg" alt="img: lebowski" />
+                
+      </div>
+
+      <div class="inner">
+        <label for="2">Received new task
+            <i class="close-button">&#43;</i>
+        </label>
+        <input type="radio" name="meme" id="2" />
+
+        <img class="not-active" src="./img/zootopia.gif" alt="gif: zootopia" />
+        
+      </div>
+
+      <div class="inner">
+        <label for="3">Warning: Coder at work
+            <i class="close-button">&#43;</i>
+        </label>
+        <input type="radio" name="meme" id="3" />
+
+        <img class="not-active" src="./img/coder.gif" alt="gif: coder" />
+        
+      </div>
+
+      <div class="inner">
+        <label for="4">DO NOT merge
+            <i class="close-button">&#43;</i>
+        </label>
+        <input type="radio" name="meme" id="4" />
+
+        <img
+          class="not-active"
+          src="./img/terminator.gif"
+          alt="gif: terminator"
+        />
+        
+      </div>
+
+      <div class="inner">
+        <label for="5">When submitted your task
+            <i class="close-button">&#43;</i>
+        </label>
+        <input type="radio" name="meme" id="5" />
+
+        <img class="not-active" src="./img/mib.gif" alt="gif: man in black" />
+        
+      </div>
+    </div>
+  </body>
 </html>
+
+
+
+<!-- 
+    1.перевернуть крестик при нажатии
+    2. при наведении курсора не прятать картинку/содержимое
+    
+    <div class="inner">
+    <label>
+        <i class="close-button"></i>
+    </label>   
+    <input type="radio"/>
+    <img />   
+  </div>
+
+label:hover > .close-button{
+    переворачивает крестик
+}
+
+label:checked > .close-button{
+    нифига не работает
+}
+
+input:checked > .close-button{
+    нифига не работает
+}
+
+а так же + ~ .close-button -->

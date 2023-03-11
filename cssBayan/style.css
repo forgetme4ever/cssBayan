@@ -1,0 +1,90 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+label{
+    display: block;
+    font-size: 4vh;
+    cursor: pointer;
+    background-color: rgb(121, 168, 209);
+    padding: 0.25em;
+    box-sizing: border-box;
+    margin-bottom: 0.2vh;
+    margin-top: 1.6vh;
+    border: 0.1em solid rgb(83, 82, 82);
+    color: #fff;   
+}
+
+.inner {
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    min-width: 100%;   
+}
+
+label:hover ~ img{
+    opacity: 0;
+    animation: ani 1.5s forwards;
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+label:hover {
+    background-color:rgb(133, 205, 247);
+    
+}
+
+label:hover > .close-button{
+    display: inline-block;
+transform: rotate(45deg);
+}
+
+input:checked + img {
+    display: block;
+    width: 100%;
+}
+
+input:checked .close-button{ 
+    display: inline-block;  
+    transform: rotate(45deg);   
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+input {
+    appearance: none;
+}
+
+.wrapper {
+    /* margin-left: 10vw;
+    margin-right: 10vw; */
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 6vh;
+    margin-bottom: 6vh; */
+    max-width: 25vw;
+    margin: 2em auto;
+    background-color:rgb(228, 231, 231);  
+}
+
+img {
+    cursor: pointer;
+    display: none;
+}
+
+
+.close-button {
+    float: right;   
+}
+
+
+label:hover{
+    display:block;
+    width: 100%;
+}
