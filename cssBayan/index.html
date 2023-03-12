@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Accordeon</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <input type="radio" name="meme" checked="checked" id="1" />
+
+        <label for="1"
+          >Discord: announcements!
+
+          <img class="active" src="./img/lebowski.gif" alt="img: lebowski" />
+          <i class="close-button">&#43;</i>
+        </label>
+      </div>
+
+      <div class="inner">
+        <input type="radio" name="meme" id="2" />
+        <label for="2"
+          >Received new task
+          <img
+            class="not-active"
+            src="./img/zootopia.gif"
+            alt="gif: zootopia"
+          />
+          <i class="close-button">&#43;</i>
+        </label>
+      </div>
+
+      <div class="inner">
+        <input type="radio" name="meme" id="3" />
+        <label for="3"
+          >Warning: Coder at work
+          <img class="not-active" src="./img/coder.gif" alt="gif: coder" />
+          <i class="close-button">&#43;</i>
+        </label>
+      </div>
+
+      <div class="inner">
+        <input type="radio" name="meme" id="4" />
+        <label for="4"
+          >DO NOT merge
+          <img
+            class="not-active"
+            src="./img/terminator.gif"
+            alt="gif: terminator"
+          />
+          <i class="close-button">&#43;</i>
+        </label>
+      </div>
+
+      <div class="inner">
+        <input type="radio" name="meme" id="5" />
+        <label for="5"
+          >When submitted your task
+          <img class="not-active" src="./img/mib.gif" alt="gif: man in black" />
+          <i class="close-button">&#43;</i>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    1.перевернуть крестик при нажатии
+    2. при наведении курсора не прятать картинку/содержимое
+    
+    <div class="inner">
+    <label>
+        <i class="close-button"></i>
+    </label>   
+    <input type="radio"/>
+    <img />   
+  </div>
+
+label:hover > .close-button{
+    переворачивает крестик
+}
+
+label:checked > .close-button{
+    нифига не работает
+}
+
+input:checked > .close-button{
+    нифига не работает
+}
+
+а так же + ~ .close-button -->
