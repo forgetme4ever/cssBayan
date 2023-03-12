@@ -1,90 +1,143 @@
-*, body {
-    margin: 0;
-    padding: 0;
+*,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-label{
-    display: block;
-    font-size: 4vh;
-    cursor: pointer;
-    background-color: rgb(121, 168, 209);
-    padding: 0.25em;
-    box-sizing: border-box;
-    margin-bottom: 0.2vh;
-    margin-top: 1.6vh;
-    border: 0.1em solid rgb(83, 82, 82);
-    color: #fff;   
+label {
+  display: grid;
+  font-size: 4vh;
+  cursor: pointer;
+  background-color: rgb(186, 209, 233);
+  padding: 0.25em;
+  box-sizing: border-box;
+  /* margin-bottom: 0.2vh; */
+  /* margin-top: 1.6vh; */
+  border-top: 0.1em solid rgb(148, 142, 142);
+  color: rgb(124, 123, 123);
+  width: 100%;
 }
 
+i,
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: 1/2;
+}
 .inner {
-    margin-left: 0.4em;
-    margin-right: 0.4em;
-    min-width: 100%;   
+  margin: 0;
+  min-width: 100%;
 }
 
-label:hover ~ img{
-    opacity: 0;
-    animation: ani 1.5s forwards;
-    display: block;
-    max-width: 100%;
-    min-width: 100%;
+label:hover > img {
+  opacity: 0;
+  animation: ani 1.5s forwards;
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
 }
+
+/* label:hover +.close-button {
+    opacity: 1;
+    visibility: visible;
+} */
 
 label:hover {
-    background-color:rgb(133, 205, 247);
-    
+  background-color: rgb(133, 205, 247);
+  display: grid;
 }
 
-label:hover > .close-button{
-    display: inline-block;
-transform: rotate(45deg);
+label:hover > .close-button {
+  transform: rotate(45deg);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
-input:checked + img {
-    display: block;
-    width: 100%;
+input:checked + label > i {
+  transform: rotate(45deg);
 }
 
-input:checked .close-button{ 
-    display: inline-block;  
-    transform: rotate(45deg);   
+input:checked + label {
+  display: block;
+  width: 100%;
+}
+
+input:checked + label > img {
+  display: block;
+  width: 100%;
 }
 
 @keyframes ani {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 input {
-    appearance: none;
+  appearance: none;
 }
 
 .wrapper {
-    /* margin-left: 10vw;
+  /* margin-left: 10vw;
     margin-right: 10vw; */
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 6vh;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 6vh;
     margin-bottom: 6vh; */
-    max-width: 25vw;
-    margin: 2em auto;
-    background-color:rgb(228, 231, 231);  
+  max-width: 25vw;
+  margin: 2em auto;
+  background-color: rgb(228, 231, 231);
 }
 
 img {
-    cursor: pointer;
-    display: none;
+  cursor: pointer;
+  display: none;
 }
-
 
 .close-button {
-    float: right;   
+  display: inline-block;
 }
 
+label:hover {
+  display: block;
+  width: 100%;
+}
 
-label:hover{
-    display:block;
-    width: 100%;
+@media screen and (max-width: 1919.98px) {
+  label {
+    font-size: 1.65em;
+    cursor: default;
+    max-width: 100%;
+  }
+  img {
+    cursor: default;
+  }
+  .wrapper {
+    min-width: 60vw;
+    overflow: hidden;
+  }
+  .inner {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  label {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  label {
+    font-size: 1.05em;
+  }
 }
